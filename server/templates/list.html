@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+        <head>
+                <title>s3602839 Database</title>
+                <link rel="stylesheet" href='../static/style.css'/>
+        </head>
+<body>
+        <h1> s3602839 Database log </h1>
+        <hr>
+        <h2><a href = "/">Return Home!</a></h2>
+        <hr>
+        <table border = 1>
+         <thead>
+            <td>ID: </td>
+            <td>Time: </td>
+            <td>Temperature: </td>
+            <td>Humidity: </td>
+         </thead>
+
+         {% for row in rows %}
+            <tr>
+               <td>{{row["id"]}}</td>
+               <td>{{row["timestamp"]}}</td>
+               <td> {{ row["temperature"]}}</td>
+               <td>{{row["humidity"]}}</td>
+            </tr>
+         {% endfor %}
+      </table>
+        <p> @2018  Adrian Marotta - s3602839</p>
+</body>
+</html>
